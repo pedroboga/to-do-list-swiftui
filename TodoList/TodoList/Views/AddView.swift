@@ -21,7 +21,7 @@ struct AddView: View {
                 TextField("Type something here...", text: $textFieldText)
                     .padding(.horizontal)
                     .frame(height: 55)
-                    .background(Color.init(uiColor: .secondarySystemBackground))
+                    .background(Color.init(uiColor: .tertiarySystemBackground))
                 .cornerRadius(10)
                 
                 Button {
@@ -39,6 +39,7 @@ struct AddView: View {
             }
             .padding(14)
         }
+        .background(Color("BackgroundAccentColor"))
         .navigationTitle("Add an Item 🖋")
         .alert(isPresented: $showAlert) {
             getAlert()
