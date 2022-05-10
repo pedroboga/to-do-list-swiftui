@@ -20,18 +20,11 @@ struct NoItemsView: View {
                 Text("Click on the add button to starting adding items to your to-do list")
                     .padding(.bottom, 20)
                 NavigationLink(destination: AddView()) {
-                    Text("Add something")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .frame(height: 55)
-                        .frame(maxWidth: .infinity)
-                        .background(animate ? secondaryAccentColor : Color.accentColor)
-                        .cornerRadius(10)
+                    Image(systemName: "plus.circle")
+                        .font(.largeTitle)
+                        .opacity(0.7)
+                        .scaleEffect(animate ? 1.5 : 1.3)
                 }
-                .padding(.horizontal, animate ? 30 : 50)
-                .shadow(color: animate ? secondaryAccentColor.opacity(0.3) : Color.accentColor.opacity(0.3), radius: animate ? 30 : 10, x: 0.0, y: animate ? 50 : 30)
-                .scaleEffect(animate ? 1.1 : 1.0)
-                .offset(y: animate ? -7 : 0)
             }
             .frame(maxWidth: 400)
             .multilineTextAlignment(.center)
