@@ -27,10 +27,12 @@ struct ListView: View {
                     }
                     .onDelete(perform: listViewModel.deleteItem)
                     .onMove(perform: listViewModel.moveItem)
+                    .listRowBackground(Color("BackgroundAccentColor"))
                 }
                 .listStyle(PlainListStyle())
             }
         }
+        .background(Color("BackgroundAccentColor"))
         .navigationTitle("To-do List 📝")
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
